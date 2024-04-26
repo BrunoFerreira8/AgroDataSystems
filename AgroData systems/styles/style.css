@@ -1,0 +1,155 @@
+/* Estilos para o corpo da página */
+body {
+  background-color: rgb(24, 22, 22); /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Fonte */
+  max-width: 1200px; /* Largura máxima */
+  margin: 0 auto; /* Centralizar horizontalmente */
+  padding: 15px; /* Espaçamento interno */
+  /* Imagem de fundo */
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/WhatsApp Image 2024-04-17 at 23.06.51.jpeg");
+  background-size: cover; /* Cobrir todo o espaço */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para o título*/
+#title {
+  display: flex;
+  flex-direction: column;
+  line-height: 10px;
+}
+
+/* Estilos para a seção "Sobre nós" */
+.Sobrenós {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Alterado para linha */
+  justify-content: space-around;
+  /* width: 1130px; */ /* Removido para permitir ajuste automático */
+}
+
+/* Estilos para o texto dentro da seção "Sobre nós" */
+.textsobre {
+  margin: 0 130px; /* Adiciona margem aos lados */
+}
+
+/* Estilos para a imagem dentro da seção "Sobre nós" */
+#img1 {
+  max-width: 100%; /* Largura máxima igual à largura do contêiner pai */
+  height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilos para as listas */
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Estilos para os links */
+a {
+  color: white;
+}
+
+a:hover {
+  color: olive; /* Cor ao passar o mouse */
+  transition: 0.3s all; /* Efeito de transição */
+}
+
+/* Estilos para o botão com borda */
+#borda-btn {
+  border: 2px solid rgb(128, 128, 0);
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+#borda-btn:hover {
+  background-color: rgb(128, 128, 0);
+  color: white;
+}
+
+span {
+  color: olive;
+}
+.textsobre h2 {
+  font-size: 65px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: olive;
+}
+
+.textsobre p {
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: olive;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.button {
+  background-color: olive;
+  color: white;
+  text-transform: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 20px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 2px solid olive;
+}
+
+.containermissao {
+  background-color: #e9ffe8;
+  width: 100%;
+  padding: 100px 0; /* Ajustei aqui para não adicionar padding desnecessário */
+}
+
+.caixa {
+  display: flex;
+  justify-content: space-around; /* Alterei para distribuir o espaço uniformemente */
+  align-items: center;
+  min-height: 400px;
+}
+
+.card {
+  background-color: white;
+  height: 320px;
+  width: 300px; /* Ajustei a largura para criar um layout mais compacto */
+  border: 5px solid #e9ffe8; /* Adicionei uma cor de borda e ajustei a espessura da borda */
+  border-radius: 20px;
+  margin: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px; /* Adicionei preenchimento para o conteúdo dentro do cartão */
+}
+
+.card h5 {
+  font-size: 30px; /* Reduzi um pouco o tamanho do título */
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 22px; /* Reduzi um pouco o espaçamento entre linhas */
+  margin-bottom: 5px;
+  padding: 15px;
+}
