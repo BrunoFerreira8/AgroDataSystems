@@ -1,0 +1,114 @@
+body {
+  background-color: rgb(24, 22, 22); /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Fonte */
+  max-width: 1300px; /* Largura máxima */
+  margin: 0 auto; /* Centralizar horizontalmente */
+  padding: 15px; /* Espaçamento interno */
+  /* Imagem de fundo */
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/WhatsApp Image 2024-04-17 at 23.06.51.jpeg");
+  background-size: cover; /* Cobrir todo o espaço */
+}
+/* Estilos para o cabeçalho */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para o título*/
+#title {
+  display: flex;
+  flex-direction: column;
+  line-height: 10px;
+  color: olive;
+}
+
+/* Estilos para as listas */
+li {
+  display: inline-block;
+  margin: 15px;
+}
+
+/* Estilos para os links */
+a {
+  color: white;
+}
+
+a:hover {
+  color: olive; /* Cor ao passar o mouse */
+  transition: 0.3s all; /* Efeito de transição */
+}
+
+/* Estilos para o botão com borda */
+#borda-btn {
+  border: 2px solid rgb(128, 128, 0);
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+#borda-btn:hover {
+  background-color: rgb(128, 128, 0);
+  color: white;
+}
+
+.containers {
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  background-color: #014029;
+  width: 100%;
+  height: 100px;
+  margin-left: 0px; /* Margem esquerda automática */
+  margin-right: 1000px; /* Margem direita automática */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  background-color: #014029;
+  width: 100%;
+  padding: 100px 0;
+}
+
+#ag1 {
+  width: 1300px; /* Largura desejada */
+  height: 300px;
+  margin-left: 0px; /* Margem esquerda automática */
+  margin-right: 1000px; /* Margem direita automática */
+}
+
+.arrigado {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Alterado para linha */
+  justify-content: space-around;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#boi,
+#bas {
+  width: 40%;
+  height: 300px;
+  border: 1px solid;
+  margin-right: 10px; /* Adiciona um espaço entre as imagens */
+}
+
+#bas {
+  margin-right: 0; /* Remove a margem direita da segunda imagem */
+}
+
+.h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.p {
+  text-align: center;
+  margin-top: 10px;
+}
