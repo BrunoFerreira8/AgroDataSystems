@@ -1,0 +1,108 @@
+body {
+  background-color: rgb(24, 22, 22); /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Fonte */
+  max-width: 1300px; /* Largura máxima */
+  margin: 0 auto; /* Centralizar horizontalmente */
+  padding: 0; /* Remover espaçamento interno */
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/WhatsApp Image 2024-04-17 at 23.06.52.jpeg");
+  background-size: cover; /* Cobrir todo o espaço */
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px; /* Espaçamento interno para o header */
+}
+
+li {
+  display: inline-block;
+  margin: 15px;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+a:hover {
+  color: olive; /* Cor ao passar o mouse */
+  transition: 0.3s all; /* Efeito de transição */
+}
+
+/* Estilos para o botão com borda */
+#borda-btn {
+  border: 2px solid rgb(128, 128, 0);
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+#borda-btn a {
+  color: white;
+  text-decoration: none; /* Remove underline from link */
+}
+
+#borda-btn:hover {
+  background-color: rgb(128, 128, 0);
+  color: white;
+}
+
+#borda-btn:hover a {
+  color: white; /* Ensures text color remains white on hover */
+}
+
+#forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1; /* Permite que o formulário ocupe o espaço restante */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  padding: 50px;
+  border-radius: 30px;
+}
+
+form h2 {
+  margin: 0 0 20px 0; /* Espaçamento abaixo do título */
+  text-align: center; /* Centralizar o texto do título */
+}
+
+input[type="text"],
+textarea {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Remover a capacidade de redimensionar o textarea */
+textarea {
+  resize: none;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: olive;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: darkolivegreen;
+}

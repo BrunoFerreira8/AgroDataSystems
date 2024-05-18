@@ -57,6 +57,7 @@ li {
 /* Estilos para os links */
 a {
   color: white;
+  text-decoration: none; /* Remove sublinhado dos links */
 }
 
 a:hover {
@@ -75,6 +76,10 @@ a:hover {
 #borda-btn:hover {
   background-color: rgb(128, 128, 0);
   color: white;
+}
+
+#borda-btn:hover a {
+  color: white; /* Ensures text color remains white on hover */
 }
 
 span {
@@ -141,7 +146,7 @@ span {
 }
 
 .card h5 {
-  font-size: 30px; /* Reduzi um pouco o tamanho do título */
+  font-size: 30px;
   margin-bottom: 15px;
   text-align: center;
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -149,7 +154,7 @@ span {
 
 .card p {
   font-size: 16px;
-  line-height: 22px; /* Reduzi um pouco o espaçamento entre linhas */
+  line-height: 22px; /* espaçamento entre linhas */
   margin-bottom: 5px;
   padding: 15px;
 }

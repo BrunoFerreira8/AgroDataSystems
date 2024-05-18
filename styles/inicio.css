@@ -36,6 +36,7 @@ li {
 /* Estilos para os links */
 a {
   color: white;
+  text-decoration: none; /* Remove sublinhado dos links */
 }
 
 a:hover {
@@ -55,16 +56,20 @@ a:hover {
   background-color: rgb(128, 128, 0);
   color: white;
 }
+#borda-btn:hover a {
+  color: white; /* Ensures text color remains white on hover */
+}
 
 .containers {
   display: flex;
-  flex-direction: column; /* Coloca os elementos em coluna */
-  align-items: center; /* Centraliza os elementos horizontalmente */
+  flex-direction: column;
+  align-items: center;
   background-color: #014029;
   width: 100%;
-  height: 100px;
-  margin-left: 0px; /* Margem esquerda automática */
-  margin-right: 1000px; /* Margem direita automática */
+  height: 50px;
+  margin-left: auto; /* Margem esquerda automática */
+  margin-right: auto; /* Margem direita automática */
+  margin-bottom: 20px; /* Adicione um espaço extra entre .containers e #ag1 */
 }
 
 .container {
@@ -77,10 +82,11 @@ a:hover {
 }
 
 #ag1 {
-  width: 1300px; /* Largura desejada */
-  height: 300px;
-  margin-left: 0px; /* Margem esquerda automática */
-  margin-right: 1000px; /* Margem direita automática */
+  width: 1300px;
+  height: 450px;
+  margin-left: auto; /* Margem esquerda automática */
+  margin-right: auto; /* Margem direita automática */
+  margin-top: 20px; /* Adicione um espaço extra entre .containers e #ag1 */
 }
 
 .arrigado {
@@ -88,13 +94,12 @@ a:hover {
   align-items: center;
   flex-direction: row; /* Alterado para linha */
   justify-content: space-around;
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #boi,
 #bas {
-  width: 40%;
-  height: 300px;
+  width: 300;
+  height: 350px;
   border: 1px solid;
   margin-right: 10px; /* Adiciona um espaço entre as imagens */
 }
@@ -106,9 +111,74 @@ a:hover {
 .h2 {
   text-align: center;
   margin-top: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .p {
   text-align: center;
   margin-top: 10px;
+}
+
+span {
+  color: olivedrab;
+}
+
+/* Estilos para o elemento h5 */
+.pag1 {
+  margin-left: 10px;
+  font-size: 20px; /* Tamanho da fonte em unidades rems */
+}
+.hag1 {
+  font-size: 35px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; /* Espaçamento uniforme entre os cartões */
+  align-items: flex-start; /* Alinhamento no topo */
+  background-color: #014029;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Remova as definições de largura e altura fixas */
+}
+
+.card {
+  background-color: white;
+  /* Remova a altura fixa */
+  width: 400px;
+  border: 5px solid #e9ffe8;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px; /* Espaço entre os cartões */
+  margin: 0 auto; /* Centraliza o card */
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h5 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 5px;
+  padding: 15px;
+}
+
+img {
+  margin-bottom: 20px; /* Espaço entre as imagens e os cartões */
 }

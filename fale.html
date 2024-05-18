@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/styles/fale.css" rel="stylesheet" />
+    <title>AgroData Systems</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <h1><span>AgroData</span></h1>
+        <h1><span>Systems</span></h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="inicio.html">inicio</a></li>
+          <li id="borda-btn"><a href="fale.html">fale conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="forms">
+      <form action="https://api.staticforms.xyz/submit" method="post">
+        <h2>Entre em contato</h2>
+        <input type="text" name="name" placeholder="Nome" id="Nome" />
+        <input type="text" name="email" placeholder="Email" id="email" />
+        <input type="text" name="phone" placeholder="Número" id="phone" />
+        <textarea name="message" placeholder="Assunto" id="message"></textarea>
+        <input type="text" name="honeypot" style="display: none" />
+        <input
+          type="hidden"
+          name="accessKey"
+          value="69726357-33d7-4771-92b2-3e6d9bfb2ce9"
+        />
+        <input
+          type="hidden"
+          name="subject"
+          value="Contact us from - example.com"
+        />
+        <input type="hidden" name="replyTo" value="@" />
+        <input
+          type="hidden"
+          name="redirectTo"
+          value="http://127.0.0.1:5500/inicio.html"
+        />
+        <input type="submit" value="enviar" />
+      </form>
+    </div>
+  </body>
+</html>
