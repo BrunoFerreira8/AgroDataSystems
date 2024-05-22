@@ -5,21 +5,24 @@ body {
   max-width: 1300px; /* Largura máxima */
   margin: 0 auto; /* Centralizar horizontalmente */
   padding: 15px; /* Espaçamento interno */
-  /* Imagem de fundo */
-  width: 100vw;
+  width: 100%; /* Ajustado de 100vw para 100% */
   height: 100vh;
   background-image: url("../img/WhatsApp Image 2024-04-17 at 23.06.51.jpeg");
   background-size: cover; /* Cobrir todo o espaço */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
 }
+
 /* Estilos para o cabeçalho */
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Garante que o header não cause overflow */
+  box-sizing: border-box;
 }
 
-/* Estilos para o título*/
+/* Estilos para o título */
 #title {
   display: flex;
   flex-direction: column;
@@ -56,8 +59,9 @@ a:hover {
   background-color: rgb(128, 128, 0);
   color: white;
 }
+
 #borda-btn:hover a {
-  color: white; /* Ensures text color remains white on hover */
+  color: white; /* Garante que a cor do texto permaneça branca ao passar o mouse */
 }
 
 .containers {
@@ -66,46 +70,49 @@ a:hover {
   align-items: center;
   background-color: #014029;
   width: 100%;
-  height: 50px;
-  margin-left: auto; /* Margem esquerda automática */
-  margin-right: auto; /* Margem direita automática */
-  margin-bottom: 20px; /* Adicione um espaço extra entre .containers e #ag1 */
+  padding: 5px; /* Adicionei padding para evitar que o conteúdo encoste nas bordas */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .container {
   display: flex;
-  flex-direction: column; /* Coloca os elementos em coluna */
-  align-items: center; /* Centraliza os elementos horizontalmente */
+  flex-direction: column;
+  align-items: center;
   background-color: #014029;
   width: 100%;
   padding: 100px 0;
+  box-sizing: border-box;
 }
 
 #ag1 {
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
   height: 450px;
-  margin-left: auto; /* Margem esquerda automática */
-  margin-right: auto; /* Margem direita automática */
-  margin-top: 20px; /* Adicione um espaço extra entre .containers e #ag1 */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  box-sizing: border-box;
 }
 
 .arrigado {
   display: flex;
   align-items: center;
-  flex-direction: row; /* Alterado para linha */
+  flex-direction: row;
   justify-content: space-around;
+  width: 100%; /* Garante que arrigado não cause overflow */
+  box-sizing: border-box;
 }
 
 #boi,
 #bas {
-  width: 300;
-  height: 350px;
+  width: 700px; /* Aumentei a largura */
+  height: 400px; /* Aumentei a altura */
   border: 1px solid;
-  margin-right: 10px; /* Adiciona um espaço entre as imagens */
-}
-
-#bas {
-  margin-right: 0; /* Remove a margem direita da segunda imagem */
+  margin-right: 10px;
+  box-sizing: border-box;
 }
 
 .h2 {
@@ -126,43 +133,34 @@ span {
 /* Estilos para o elemento h5 */
 .pag1 {
   margin-left: 10px;
-  font-size: 20px; /* Tamanho da fonte em unidades rems */
-}
-.hag1 {
-  font-size: 35px;
+  font-size: 20px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; /* Espaçamento uniforme entre os cartões */
-  align-items: flex-start; /* Alinhamento no topo */
-  background-color: #014029;
-  width: 100%;
-  padding: 100px 0;
+.hag1 {
+  font-size: 35px;
 }
 
 .image-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Remova as definições de largura e altura fixas */
 }
 
 .card {
   background-color: white;
-  /* Remova a altura fixa */
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   border: 5px solid #e9ffe8;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  margin-top: 20px; /* Espaço entre os cartões */
-  margin: 0 auto; /* Centraliza o card */
+  margin: 20px auto;
+  box-sizing: border-box;
 }
 
 .card-content {
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .card h5 {
@@ -177,8 +175,77 @@ span {
   line-height: 22px;
   margin-bottom: 5px;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 img {
-  margin-bottom: 20px; /* Espaço entre as imagens e os cartões */
+  margin-bottom: 20px;
+  max-width: 100%; /* Garante que as imagens não causem overflow */
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center; /* Alinhar ao centro */
+  }
+
+  #title-buttons {
+    flex-direction: column;
+    align-items: center; /* Alinhar ao centro */
+    margin-top: 10px;
+  }
+
+  .arrigado {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #boi,
+  #bas {
+    width: 90%;
+    height: auto; /* Permitir que a altura se ajuste automaticamente */
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    padding: 50px 0;
+  }
+
+  #ag1 {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2 {
+    font-size: 28px;
+  }
+
+  .card h5 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  #boi,
+  #bas {
+    width: 100%;
+    height: auto; /* Permitir que a altura se ajuste automaticamente */
+  }
 }

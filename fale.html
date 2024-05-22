@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/styles/fale.css" rel="stylesheet" />
+
     <title>AgroData Systems</title>
   </head>
   <body>
@@ -14,18 +15,36 @@
       </div>
       <nav>
         <ul>
-          <li><a href="inicio.html">inicio</a></li>
+          <li><a href="index.html">inicio</a></li>
           <li id="borda-btn"><a href="fale.html">fale conosco</a></li>
         </ul>
       </nav>
     </header>
+
     <div id="forms">
       <form action="https://api.staticforms.xyz/submit" method="post">
         <h2>Entre em contato</h2>
-        <input type="text" name="name" placeholder="Nome" id="Nome" />
-        <input type="text" name="email" placeholder="Email" id="email" />
-        <input type="text" name="phone" placeholder="Número" id="phone" />
-        <textarea name="message" placeholder="Assunto" id="message"></textarea>
+        <input type="text" name="name" placeholder="Nome" id="Nome" required />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          id="email"
+          required
+        />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Número"
+          id="phone"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Assunto"
+          id="message"
+          required
+        ></textarea>
         <input type="text" name="honeypot" style="display: none" />
         <input
           type="hidden"
@@ -41,10 +60,11 @@
         <input
           type="hidden"
           name="redirectTo"
-          value="http://127.0.0.1:5500/inicio.html"
+          value="https://agrodatasystems.github.io/index.html"
         />
         <input type="submit" value="enviar" />
       </form>
     </div>
+  
   </body>
 </html>

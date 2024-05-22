@@ -1,4 +1,8 @@
-/* Estilos para o corpo da página */
+/* Adicione esta regra global */
+* {
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura e altura */
+}
+
 body {
   background-color: rgb(24, 22, 22); /* Cor de fundo */
   color: white; /* Cor do texto */
@@ -7,9 +11,9 @@ body {
   margin: 0 auto; /* Centralizar horizontalmente */
   padding: 15px; /* Espaçamento interno */
   /* Imagem de fundo */
-  width: 100vw;
+  width: 100%; /* Ajustado de 100vw para 100% */
   height: 100vh;
-  background-image: url("../img/WhatsApp\ Image\ 2024-04-17\ at\ 23.06.51.jpeg");
+  background-image: url("../img/WhatsApp Image 2024-04-17 at 23.06.51.jpeg");
   background-size: cover; /* Cobrir todo o espaço */
 }
 
@@ -19,53 +23,23 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Garante que o header não cause overflow */
 }
 
-/* Estilos para o título*/
 #title {
   display: flex;
   flex-direction: column;
   line-height: 10px;
 }
 
-/* Estilos para a seção "Sobre nós" */
-.Sobrenós {
+#title-buttons {
   display: flex;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
-  flex-direction: row; /* Alterado para linha */
-  justify-content: space-around;
-  /* width: 1130px; */ /* Removido para permitir ajuste automático */
 }
 
-/* Estilos para o texto dentro da seção "Sobre nós" */
-.textsobre {
-  margin: 0 130px; /* Adiciona margem aos lados */
-}
 
-/* Estilos para a imagem dentro da seção "Sobre nós" */
-#img1 {
-  max-width: 100%; /* Largura máxima igual à largura do contêiner pai */
-  height: auto; /* Altura automática para manter a proporção */
-}
-
-/* Estilos para as listas */
-li {
-  display: inline-block;
-  margin: 15px;
-}
-
-/* Estilos para os links */
-a {
-  color: white;
-  text-decoration: none; /* Remove sublinhado dos links */
-}
-
-a:hover {
-  color: olive; /* Cor ao passar o mouse */
-  transition: 0.3s all; /* Efeito de transição */
-}
-
-/* Estilos para o botão com borda */
 #borda-btn {
   border: 2px solid rgb(128, 128, 0);
   padding: 10px;
@@ -79,26 +53,7 @@ a:hover {
 }
 
 #borda-btn:hover a {
-  color: white; /* Ensures text color remains white on hover */
-}
-
-span {
-  color: olive;
-}
-.textsobre h2 {
-  font-size: 65px;
-  text-transform: capitalize;
-  margin-bottom: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: olive;
-}
-
-.textsobre p {
-  letter-spacing: 1px;
-  line-height: 28px;
-  color: olive;
-  font-size: 18px;
-  margin-bottom: 35px;
+  color: white; /* Garante que a cor do texto permaneça branca ao passar o mouse */
 }
 
 .button {
@@ -117,10 +72,68 @@ span {
   border: 2px solid olive;
 }
 
+/* Estilos para a seção "Sobre nós" */
+.Sobrenós {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Alterado para linha */
+  justify-content: space-around;
+  width: 100%; /* Garante que .Sobrenós não cause overflow */
+}
+
+.textsobre {
+  margin: 0 130px; /* Adiciona margem aos lados */
+  padding: 0; /* Remove padding desnecessário */
+  box-sizing: border-box;
+}
+
+#img1 {
+  max-width: 100%; /* Largura máxima igual à largura do contêiner pai */
+  height: auto; /* Altura automática para manter a proporção */
+}
+
+/* Estilos para listas */
+li {
+  display: inline-block;
+  margin: 15px;
+}
+
+/* Estilos para links */
+a {
+  color: white;
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+a:hover {
+  color: olive; /* Cor ao passar o mouse */
+  transition: 0.3s all; /* Efeito de transição */
+}
+
+span {
+  color: olive;
+}
+
+.textsobre h2 {
+  font-size: 65px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: olive;
+}
+
+.textsobre p {
+  letter-spacing: 1px;
+  line-height: 28px;
+  color: olive;
+  font-size: 16px; /* Reduzido para ficar menor */
+  margin-bottom: 35px;
+}
+
 .containermissao {
   background-color: #014029;
   width: 100%;
   padding: 100px 0; /* Ajustei aqui para não adicionar padding desnecessário */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
 }
 
 .caixa {
@@ -128,12 +141,13 @@ span {
   justify-content: space-around; /* Alterei para distribuir o espaço uniformemente */
   align-items: center;
   min-height: 400px;
+  width: 100%; /* Garante que .caixa não cause overflow */
 }
 
 .card {
   background-color: white;
-  height: 320px;
-  width: 300px; /* Ajustei a largura para criar um layout mais compacto */
+  height: 280px; /* Reduzido para criar um layout mais compacto */
+  width: 250px; /* Reduzido para criar um layout mais compacto */
   border: 5px solid #e9ffe8; /* Adicionei uma cor de borda e ajustei a espessura da borda */
   border-radius: 20px;
   margin: 25px;
@@ -153,8 +167,83 @@ span {
 }
 
 .card p {
-  font-size: 16px;
-  line-height: 22px; /* espaçamento entre linhas */
+  font-size: 14px; /* Reduzido */
+  line-height: 22px; /* Espaçamento entre linhas */
   margin-bottom: 5px;
   padding: 15px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center; /* Alinhar ao centro */
+  }
+
+  #title-buttons {
+    flex-direction: column;
+    align-items: center; /* Alinhar ao centro */
+    margin-top: 10px;
+  }
+
+  .Sobrenós {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Garante que .Sobrenós não cause overflow */
+  }
+
+  .textsobre {
+    margin: 0;
+    padding: 0 10px;
+  }
+
+  .textsobre h2 {
+    font-size: 50px;
+  }
+
+  .textsobre p {
+    font-size: 14px;
+  }
+
+  .caixa {
+    flex-direction: column;
+    width: 100%; /* Garante que .caixa não cause overflow */
+  }
+
+  .card {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .card h5 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2 {
+    font-size: 28px;
+  }
+
+  .card h5 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  #boi,
+  #bas {
+    width: 100%;
+    height: auto; /* Permitir que a altura se ajuste automaticamente */
+  }
 }
